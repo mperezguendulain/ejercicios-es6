@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Class</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		class Persona
+		{
+			constructor(nombre, edad = 0)
+			{
+				this.nombre = nombre;
+				this.edad = edad;
+			}
+
+			saluda()
+			{
+				console.log(`Hola me llamo: ${this.nombre} y soy una Persona.`);
+			}
+
+			get Nombre()
+			{
+				return this.nombre;
+			}
+
+			set Nombre(value)
+			{
+				this.nombre = value;
+			}
+
+			get Edad()
+			{
+				return this.edad;
+			}
+
+			set Edad(value)
+			{
+				this.edad = value;
+			}
+		}
+
+		class Estudiante extends Persona
+		{
+			constructor(nombre, edad, escuela)
+			{
+				super(nombre, edad);
+				this.escuela = escuela;
+			}
+
+			saluda()
+			{
+				console.log(`Hola, me llamo ${super.Nombre} y soy Estudiante de: ${this.escuela}, tengo ${super.Edad} años.`);
+			}
+
+			get Escuela()
+			{
+				return this.escuela;
+			}
+
+			set Escuela(value)
+			{
+				this.escuela = value;
+			}
+		}
+
+		var martin = new Persona("Martín Alejandro", 23);
+		var adrii = new Estudiante("Adriana Herrera", 23, "UTM");
+
+		martin.saluda();
+		adrii.saluda();
+	</script>
+</body>
+</html>

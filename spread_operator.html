@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> ... operator</title>
+</head>
+<body>
+	<script>
+		function getSum(...numeros) {
+			sumatoria = 0;
+			for(let i = 0; i < numeros.length; i++)
+				sumatoria += numeros[i];
+			return sumatoria
+		}
+
+		alert(getSum(1, 2, 3));
+		alert(getSum(1, 2, 3, 4, 5));
+
+		var numeros = [1, 2, 3, 4, 5];
+		alert(getSum(...numeros))
+	</script>
+</body>
+</html>

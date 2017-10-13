@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrow "=>" Function</title>
+</head>
+<body>
+	<script>
+		var sum2nums = (x, y) => x + y;
+
+		alert(sum2nums(5, 4));
+
+		var numeros = [1, 2, 3, 4, 5]
+		numeros.forEach(elem => { console.log(elem); });
+
+		function ClasePrueba() {
+			this.numeros = [2, 4, 6, 8, 10];
+
+			setTimeout(() => this.numeros.forEach(elem => { console.log(elem); }));
+		}
+
+		var cp = new ClasePrueba();	
+
+	</script>
+</body>
+</html>

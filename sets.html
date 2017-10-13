@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sets</title>
+</head>
+<body>
+	<script>
+		var conjunto = new Set();
+
+		conjunto.add({nombre: "alex", edad: 23});
+		conjunto.add(45);
+		conjunto.add([1, 2, 3, 4, 5]);
+		conjunto.add(45);	// <<--- no lo mete al set
+		conjunto.add("Saludos");
+
+		console.log(`Exite el elemento 'Saludos'? : ${conjunto.has("Saludos")}`);
+
+		conjunto.delete("Saludos");
+		
+		console.log(`Exite el elemento 'Saludos'? : ${conjunto.has("Saludos")}`);
+
+		for(let elem of conjunto)
+		{
+			console.log(`elem: ${elem}`);
+		}
+
+		// Creando un nuevo conjunto desde un arreglo
+		var conjunto_aux = new Set([1, 2, 34, "hola", {pal: "como", index: 34}]);
+
+		for(let elem of conjunto_aux)
+		{
+			console.log(`elem: ${elem}`);
+		}
+
+		// Creando un nuevo conjunto desde otro conjunto
+		var conjunto_copia = new Set(conjunto);
+		for(let elem of conjunto_copia)
+		{
+			console.log(`elem: ${elem}`);
+		}
+	</script>
+</body>
+</html>

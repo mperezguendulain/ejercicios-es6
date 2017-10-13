@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Default Function Arguments Values</title>
+</head>
+<body>
+	<script>
+		function saluda(nombre = "desconocido") {
+			alert("Hola " + nombre);
+		}
+
+		function getEdad(edad = 14 + 7)
+		{
+			alert("Tu edad es: " + edad);
+		}
+
+		saluda("martin");
+		getEdad(23);
+		saluda();
+		getEdad();
+
+	</script>
+</body>
+</html>

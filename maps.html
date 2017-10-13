@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Maps</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		var mapa = new Map();
+
+		mapa.set("alex", 23);
+		mapa.set({nombre: "alex", edad: 23, escuela: "UTM"}, 23);
+		mapa.set("adrii", 22);
+		mapa.set(21, "animal");
+		mapa.set(21, "animalReescrito");
+
+		console.log(`tamaño del mapa: ${mapa.size}`);
+
+		// Itera sobre todos los elementos del mapa
+		for(let x of mapa)
+		{
+			console.log(x);
+		}
+
+		console.log(`¿Se encuentra la clave 21?: ${mapa.has("adrii")}`);
+		mapa.delete("adrii");
+		console.log(`¿Se encuentra la clave 21?: ${mapa.has("adrii")}`);
+
+		console.log(`Edad de alex: ${mapa.get("alex")}`);
+
+
+		console.log(`tamaño del mapa: ${mapa.size}`);
+		mapa.clear();
+		console.log(`tamaño del mapa: ${mapa.size}`);
+
+		// Crear un mapa a traves de un arreglo
+		var mapa_aux = new Map([["juan", 21],["chio", 25]]);
+		// obtener los puros valores de un mapa
+		mapa_aux.forEach(elem => console.log(elem));
+	</script>
+</body>
+</html>
